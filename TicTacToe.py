@@ -31,7 +31,7 @@ class Game:
 		play_btn=Button(self.image1_canvas,text='New',width=10,height=1,bg='#24444a',bd=12,font=('helvetica', 17, 'bold italic'),command=lambda:self.Names_Signs_Selection('yes')).place(x=493,y=340)
 		exit_root_btn=Button(self.image1_canvas,text='Exit',width=10,height=1,bg='#24444a',bd=12,font=('helvetica', 17, 'bold italic'),command=self.Exit).place(x=493,y=450)
 		self.image1_canvas.pack()	
-		self.photo1=PhotoImage(file='images/i1.gif',format='gif -index '+str(0))
+		self.photo1=PhotoImage(file='images/Image1.gif',format='gif -index '+str(0))
 		self.image1_canvas_img=self.image1_canvas.create_image(0,0,image=self.photo1,anchor=NW)
 		self.image1_canvas.image=self.photo1	
 	
@@ -47,7 +47,7 @@ class Game:
 			self.p2_name_var.set('')
 			self.selection_done=='yes'	
 		self.image2_canvas=Canvas(self.frame_on_image1_canvas,width=1200,height=800)
-		self.photo2=PhotoImage(file='images/i2.gif',format='gif')
+		self.photo2=PhotoImage(file='images/Image2.gif',format='gif')
 		self.image2_canvas_img=self.image2_canvas.create_image(0,0,image=self.photo2,anchor=NW)
 		self.image2_canvas.pack()
 		self.Players()
@@ -96,7 +96,7 @@ class Game:
 			self.image2_canvas.destroy()
 			self.image3_canvas=Canvas(self.frame_on_image1_canvas,width=1200,height=800)
 			self.image3_canvas.pack()
-			self.photo3=PhotoImage(file='images/i3.gif',format='gif -index 0')
+			self.photo3=PhotoImage(file='images/Image3.gif',format='gif -index 0')
 			self.image3_canvas_img=self.image3_canvas.create_image(0,0,image=self.photo3,anchor=NW)
 		self.game_frame=Frame(self.image3_canvas,width=280,height=245,bg='#FFE933',bd=15,relief=GROOVE)
 		self.game_frame.place(x=450,y=200)
@@ -254,7 +254,7 @@ class Game:
 		self.b_back_to_players.destroy()	
 		self.canvas=Canvas(self.image3_canvas,width=350,height=280,bg='black',bd=15,relief=GROOVE)
 		self.canvas.place(x=400,y=165)
-		self.photo4=PhotoImage(file='images/i4.gif')
+		self.photo4=PhotoImage(file='images/Image4.gif')
 		self.canvas_image13=self.canvas.create_image(0,0,image=self.photo4,anchor=NW)
 		if box=='no_Winner':
 			self.Winner_label=Label(self.canvas,text='No One is Winner',bg='#ff00bf',bd=10,relief=GROOVE,font=('helvetica',10,'bold italic')).place(x=10,y=10)
